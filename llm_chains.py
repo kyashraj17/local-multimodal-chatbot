@@ -1,7 +1,7 @@
 from langchain_community.llms import CTransformers
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceInstructEmbeddings
-from langchain.memory import ConversationBufferWindowMemory
+from langchain.memory.buffer_window import ConversationBufferWindowMemory
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, RetrievalQA
 from operator import itemgetter
@@ -64,3 +64,4 @@ def load_normal_chain():
 
 def load_pdf_chat_chain():
     return pdfChatChain()
+
